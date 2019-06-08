@@ -1,0 +1,45 @@
+Creating file system image 
+
+buscar loopback devices libres
+	sudo losetup -f
+
+utilizamos una para agilizar procesos de creado de filesystem, montamos la imagen que creamos anteriormente
+	sudo losetup /dev/loop5 ./sdcard.img
+
+Particiones son creadas como ETX2/3 por default
+
+	sudo fdisk /dev/loop5
+	n
+	p
+	1
+	Enter // Para tomar el offset de inicio por default
+	+16M // Lista la primer particion
+
+	n
+	p
+	2
+	Enter // offset de inicio por default
+	Enter // para que tome el espacio restante
+
+	t // cambiar el tipo de particion
+	1 // particion 1
+	c // fat32
+	a // setear bootable flag ...
+	1 // ... en particion 1
+	w // guardar y salir
+
+Podria ser necesario correr lo siguiente para la apropiada deteccion de las particiones
+sudo partprobe /dev/loop22
+
+Formateamos la particion FAT32
+sudo mkfs.vfat -F 32 /dev/loop5p1 -n BOOT //p1 de particion 1, puede consultarse las
+					    particiones en fdisk.
+
+Formateamos la particion EXT3
+sudo mkfs.ext3 -q -L ROOT /dev/loop5p2
+
+
+Copiar zImage y devicetree (vexpress-v2p-ca9.dtb) a la particion FAT32
+Copiar contenidos del directorio _install de busybox a la particion EXT3
+	OJO: podria ser encesario montar esa particion en un directorio en /media/CrearTempDir
+	     y copiarlo ahi
