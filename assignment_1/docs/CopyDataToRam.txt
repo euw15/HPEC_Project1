@@ -1,0 +1,13 @@
+Nuestro sdcard por default estara ubicado en mmc 0
+
+para cargar zImage en ram en 0x60000000 corremos:
+
+	fatload mmc 0 0x60000000 zImage
+
+y para el datatree
+
+	fatload mmc 0 0x60500000 vexpress-v2p-ca9.dtb
+
+Posteriormente seteamos la variable bootargs
+
+	setenv bootargs root=/dev/mmcblk0p2 rw console=${console} mem=512M vmalloc=256M
