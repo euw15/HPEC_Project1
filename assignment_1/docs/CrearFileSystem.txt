@@ -1,5 +1,9 @@
 Creating file system image 
 
+El siguiente comando crea una imagen llena de ceros, con un tamanho de bs*count Bytes
+
+dd if=/dev/zero of=sdcard.img bs=1024 count=32768
+
 buscar loopback devices libres
 	sudo losetup -f
 
@@ -40,6 +44,8 @@ sudo mkfs.ext3 -q -L ROOT /dev/loop5p2
 
 
 Copiar zImage y devicetree (vexpress-v2p-ca9.dtb) a la particion FAT32
+	sudo cp archivitoBello /dev/loop5p1 //p1 es la particion 1 (FAT32), usar p2 para la EXT3
+	sudo cp -r dirDeBusybox/_install/* /dev/loop5p2
 Copiar contenidos del directorio _install de busybox a la particion EXT3
 	OJO: podria ser encesario montar esa particion en un directorio en /media/CrearTempDir
 	     y copiarlo ahi
