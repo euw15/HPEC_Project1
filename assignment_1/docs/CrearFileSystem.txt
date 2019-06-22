@@ -45,7 +45,16 @@ sudo mkfs.ext3 -q -L ROOT /dev/loop5p2
 
 Copiar zImage y devicetree (vexpress-v2p-ca9.dtb) a la particion FAT32
 	sudo cp archivitoBello /dev/loop5p1 //p1 es la particion 1 (FAT32), usar p2 para la EXT3
-	sudo cp -r dirDeBusybox/_install/* /dev/loop5p2
+
 Copiar contenidos del directorio _install de busybox a la particion EXT3
-	OJO: podria ser encesario montar esa particion en un directorio en /media/CrearTempDir
-	     y copiarlo ahi
+OJO: podria ser encesario montar esa particion en un directorio en /media/CrearTempDir
+y copiarlo ahi
+   - Ademas de lo indicado en el enunciado en cuanto a los directorios que crear manualmente
+     en _install, crear tambien los indicados en 
+     https://learningfromyoublog.wordpress.com/2016/04/05/131/
+
+	sudo cp -r dirDeBusybox/_install/* /dev/loop5p2
+
+
+Opcional: desmontar unidad de loopback
+	sudo losetup -d /dev/loop22

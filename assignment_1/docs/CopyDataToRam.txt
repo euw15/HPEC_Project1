@@ -1,3 +1,5 @@
+Nota: Crtl   A   C    habilita la consola de qemu mientras se emula
+
 Nuestro sdcard por default estara ubicado en mmc 0
 
 para cargar zImage en ram en 0x60000000 corremos:
@@ -11,3 +13,7 @@ y para el datatree
 Posteriormente seteamos la variable bootargs
 
 	setenv bootargs root=/dev/mmcblk0p2 rw console=${console} mem=512M vmalloc=256M
+
+Cargar desde RAM con bootz
+	
+	bootz 0x60000000 - 0x60500000
