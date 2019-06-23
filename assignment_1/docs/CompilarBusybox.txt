@@ -1,0 +1,43 @@
+En el directorio de busybox, compilar:
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- defconfig  //crea configuracion basica
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig //buscar y habilitar como libreria estatica
+
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- install
+
+Referirse al link enc aso de errores de compilacion. Deshabilitar los correspondientes flags en archivo .config
+	https://github.com/osm0sis/android-busybox-ndk/blob/master/README.md
+
+	chmod +s busybox
+
+Crear los siguientes directorios bajo _install/, para una adecuada secuencia de booteo
+	sudo mkdir -p _install/dev/
+	sudo mknod _install/dev/tty1 c 4 1
+	sudo mknod _install/dev/tty2 c 4 2
+	sudo mknod _install/dev/tty3 c 4 3
+	sudo mknod _install/dev/tty4 c 4 4
+	sudo mknod _install/dev/console c 5 1
+	sudo mknod _install/dev/ttyAMA0 c 204 64
+	sudo mknod _install/dev/null c 1 3
+
+- Ademas de lo indicado en el enunciado en cuanto a los directorios que crear manualmente
+     en _install, se provee tambien lo indicado en https://learningfromyoublog.wordpress.com/2016/04/05/131/
+	
+	mkdir -p _install/proc/
+	mkdir -p _install/sys/
+	mkdir -p _install/tmp/
+	mkdir -p _install/root/
+	mkdir -p _install/var/
+	mkdir -p _install/mnt/
+	mkdir -p _install/dev/
+	mkdir -p _install/Home/
+	mkdir -p _install/etc/init.d/
+
+Copiar los archivos que se encuentran en resources/ en este repositorio, a _install/etc/
+
+Cambiar los permisos de uno de esos archivos (ya los lleva cambiados pero por cualquier cosa)
+
+	chmod a+x _install/etc/init.d/rcS
+	chmod 777 _install/etc/init.d/rcS
+
+	luego chmod -R 777 _install/*
