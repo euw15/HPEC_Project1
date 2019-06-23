@@ -1,0 +1,239 @@
+qemu-system-arm -machine vexpress-a9 -cpu cortex-a9 -m 512M -kernel u-boot -nographic > u-boot-qemu.log
+
+---------------------------------------------
+
+U-Boot 2016.11 (Jun 01 2019 - 17:59:44 -0600)
+
+DRAM:  512 MiB
+WARNING: Caches not enabled
+Flash: 128 MiB
+MMC:   MMC: 0
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   smc911x-0
+Hit any key to stop autoboot:  2  1  0 
+MMC Device 1 not found
+no mmc device at slot 1
+Card did not respond to voltage select!
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+BOOTP broadcast 1
+DHCP client bound to address 10.0.2.15 (1 ms)
+*** Warning: no boot file name; using '0A00020F.img'
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename '0A00020F.img'.
+Load address: 0x80008000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: pxeuuid
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/01-52-54-00-12-34-56
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/01-52-54-00-12-34-56'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A00020F
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A00020F'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A00020
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A00020'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A0002
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A0002'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A000
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A000'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A00
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A00'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A0
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A0'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0A
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0A'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/0
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/0'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/default-arm
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/default-arm'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+missing environment variable: bootfile
+Retrieving file: pxelinux.cfg/default
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'pxelinux.cfg/default'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+Config file not found
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+BOOTP broadcast 1
+DHCP client bound to address 10.0.2.15 (0 ms)
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'boot.scr.uimg'.
+Load address: 0x88000000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+smc911x: detected LAN9118 controller
+smc911x: phy initialized
+smc911x: MAC 52:54:00:12:34:56
+BOOTP broadcast 1
+DHCP client bound to address 10.0.2.15 (1 ms)
+Using smc911x-0 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename 'boot.scr.uimg'.
+Load address: 0x80008000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+smc911x: MAC 52:54:00:12:34:56
+smc911x: MAC 52:54:00:12:34:56
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+=> <INTERRUPT>
+=> <INTERRUPT>
+=> QEMU 2.11.1 monitor - type 'help' for more information
+(qemu) q[K
