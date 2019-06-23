@@ -1,0 +1,24 @@
+Para que se cargue el kernel y dtb automaticamente en ram, y posteriormente se levante el kernel, se ha de agregar el siguiente #define a include/configs/vexpress_ca9x4.h
+(Se tomo de include/configs/vexpress_common.h y se ajusto a lo necesitado)
+
+#define CONFIG_EXTRA_ENV_SETTINGS \
+		CONFIG_PLATFORM_ENV_SETTINGS \
+                BOOTENV \
+		"console=ttyAMA0,38400n8\0" \
+		"dram=512M\0" \
+		"root=/dev/mmcblk0p2 rw\0" \
+		"flashargs=setenv bootargs root=${root} console=${console} " \
+			"mem=${dram} mmci.fmax=190000 " \
+			"devtmpfs.mount=0  vmalloc=256M\0" \
+		"bootflash=run flashargs; " \
+			"cp ${ramdisk_addr} ${ramdisk_addr_r} ${maxramdisk}; " \
+			"fatload mmc 0 0x60000000 zImage; " \
+			"fatload mmc 0 0x60500000 vexpress-v2p-ca9.dtb; " \
+			"bootz 0x60000000 - 0x60500000\0"
+
+
+Posteriormente, configuramos el ambiente con 
+	make vexpress_ca9x4_defconfig CROSS_COMPILE=arm-linux-gnueabi-
+
+Ahora compilamos
+	make all CROSS_COMPILE=arm-linux-gnueabi-
