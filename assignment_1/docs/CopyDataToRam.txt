@@ -1,3 +1,5 @@
+Correr QEMU con qemu-system-arm -machine vexpress-a9 -cpu cortex-a9 -m 512M -kernel u-boot -sd sdcard.img -nographic
+
 Nota: Crtl   A   C    habilita la consola de qemu mientras se emula
 
 Nuestro sdcard por default estara ubicado en mmc 0
