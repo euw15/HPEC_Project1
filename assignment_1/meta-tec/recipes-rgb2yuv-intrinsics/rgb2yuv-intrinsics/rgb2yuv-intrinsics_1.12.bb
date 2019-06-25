@@ -4,16 +4,25 @@ DEPENDS = ""
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-# This tells bitbake where to find the files we're providing on the local filesystem
+
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-# Use local tarball
 SRC_URI = "file://rgb2yuv-intrinsics_${PV}.tar.xz"
 
-# Make sure our source directory (for the build) matches the directory structure in the tarball
+
 S = "${WORKDIR}/"
+
+do_install_append(){
+	install -d ${D}/rgb2yuv-intrinsics-doc/
+	cp ${WORKDIR}/image.bgr /${D}/rgb2yuv-intrinsics-doc/
+	cp ${WORKDIR}/output.yuv /${D}/rgb2yuv-intrinsics-doc/
+	cp ${WORKDIR}/intrinsics_results.pdf /${D}/rgb2yuv-intrinsics-doc/
+}
+
+FILES_${PN} += "/rgb2yuv-intrinsics-doc"
+
 
 inherit autotools
 
-# The autotools configuration I am basing this on seems to have a problem with a race condition when parallel make is enabled
+
 PARALLEL_MAKE = ""
