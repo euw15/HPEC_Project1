@@ -1,5 +1,5 @@
-DESCRIPTION = "RGB2YUV Aplication"
-SECTION = "rgb2yuv"
+DESCRIPTION = "RGB2YUV INTRINSICS Aplication"
+SECTION = "rgb2yuv_intrinsics"
 DEPENDS = ""
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
@@ -8,10 +8,10 @@ LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
 # Use local tarball
-SRC_URI = "file://rgb2yuv_1.2.tar.xz"
+SRC_URI = "file://rgb2yuv-intrinsics_${PV}.tar.xz"
 
 # Make sure our source directory (for the build) matches the directory structure in the tarball
-S = "${WORKDIR}/rgb2yuv"
+S = "${WORKDIR}/"
 
 inherit autotools
 
