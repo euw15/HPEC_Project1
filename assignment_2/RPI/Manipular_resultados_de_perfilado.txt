@@ -1,0 +1,20 @@
+NOTA acerca del perfilado:
+	la porqueria me genero el archivo cuando le dio la gana. Solo me sirvio estando
+	imutils recien instalado con pip install imutils. Para general del segundo archivo
+	en adelante fue necesario desinstalarlo, correr el cProfile y que de error, luego
+	instalarlo de nuevo, y ya deberia servir para la proxima corrida. Si se quisiera otra
+	hay que volver a hacer la puya.
+
+Utilizar el archivo obtenido con el perfilado cProfile.
+
+	python -m pstats prof_rpi_vid1.out
+
+Lo anterior abre un ambiente para manipular los resultados del perfilado
+
+	strip
+	
+	sort time
+
+	stats 10
+
+	quit

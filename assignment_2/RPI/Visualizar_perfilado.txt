@@ -1,0 +1,25 @@
+Utilizar el archivo obtenido con el perfilado cProfile.
+
+
+Con el pyprof2calltree generamos un archivo con el arbol de llamados a funciones, 
+el cual podemos usar con herramientas como Kcachegrind para visualizarlo.
+
+	pip install pyprof2calltree
+
+	pyprof2calltree -i prof_rpi_cam.out -o call_tree.out
+
+El mismo pyprof2calltree puede correr de un solo Kcachegrind, con agregarle la bandera -k
+
+	sudo apt-get install kcachegrind
+
+	pyprof2calltree -i prof_rpi_cam.out -o call_tree.out -k
+
+En un ambiente sin entorno grafico, como con la Raspberry, no me sirvio correr kcachegrind,
+por lo que lo utilice en la maquina virtual.
+	
+	kcachegrind call_tree.out
+
+
+Para configurar el grafico segun el enunciado, se selecciona la pestanha de Call Graph (esta abajo),
+ahi se selecciona la funcion llamada <module>, y con click derecho se le setea los atributos descritos
+en el enunciado.

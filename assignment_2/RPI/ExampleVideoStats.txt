@@ -1,0 +1,27 @@
+Welcome to the profile statistics browser.
+prof_rpi_vid1.out% strip
+prof_rpi_vid1.out% sort time
+prof_rpi_vid1.out% stats 10
+
+Thu Jul  4 02:58:35 2019    prof_rpi_cam.out
+
+         299 function calls (297 primitive calls) in 0.003 seconds
+
+   Ordered by: internal time
+   List reduced from 45 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        6    0.001    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:1356(find_spec)
+        6    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+       30    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:56(_path_join)
+       30    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:58(<listcomp>)
+      2/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap>:978(_find_and_load)
+        1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap_external>:1240(_get_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+      2/1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:948(_find_and_load_unlocked)
+        1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:882(_find_spec)
+       30    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+
+
+prof_rpi_cam.out% quit
+Goodbye.
